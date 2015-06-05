@@ -181,6 +181,7 @@ function TasksLists() {
         for (var i = 0; i < this.allTasks.length; i++) {
             var task = this.allTasks[i];
             setPriority(task);
+            this.sortAll();
 
             // Checking for alarms
             if (!task.alarmDone && task.alarmTime) {
@@ -190,7 +191,7 @@ function TasksLists() {
                 var nowLocal = nowUtc - timeZoneOffset;
 
                 if (task.dueDate - task.alarmTime < nowLocal) {
-                    //alert("Alarm for: " + task.taskName);
+                    alert("Alarm for: " + task.taskName);
                     this.allTasks[i].alarmDone = true;
                 }
             }
@@ -239,7 +240,7 @@ function TasksLists() {
         htmlString = htmlString.concat("<tr></tr><tr><th>Name</th><th>Tag</th></tr>");
         for (var i = this.doneTasks.length - 1; i > -1; i--) {
             var task = this.doneTasks[i];
-            htmlString = htmlString.concat("<tr id='" + task.id + "' class='" + task.priority + "'><td>" + task.taskName + "</td><td>" + task.tag.tagName + "</td></tr>");
+            htmlString = htmlString.concat("<tr id='" + task.id + "'><td>" + task.taskName + "</td><td>" + task.tag.tagName + "</td></tr>");
         }
         return htmlString;
     };
