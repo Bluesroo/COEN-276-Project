@@ -1,6 +1,6 @@
 * {
     font-weight: normal;
-    font-family: sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     text-decoration: none;
 }
 
@@ -29,19 +29,39 @@ a:active, a:hover {
     text-decoration: underline;
 }
 
+p {
+    text-align: center;
+    padding: 5px 0 0 0;
+}
+
+form {
+    padding-left: 0;
+    margin-right: 15%;
+    margin-left: 30%;
+
+}
+
+label {
+    padding: 5px;
+    margin-right: 10px;
+}
+
 h2 {
     text-align: center;
 }
 
 .big-heading {
     color: #FFFFCC;
-    font-family: sans-serif;
     font-size: 80px;
     font-weight: normal;
     line-height: 48px;
     margin: 0 0 50px;
     text-align: center;
     text-shadow: 1px 1px 2px #082b34;
+}
+
+.small-heading {
+    color: #FFFFCC;
 }
 
 #container {
@@ -97,95 +117,30 @@ h2 {
     border: 2px solid black;
 }
 
-#content .general {
-    background-color: white;
-}
-
-#content .school {
-    background-color: crimson;
-}
-
-#content .work {
-    background-color: greenyellow;
-}
-
-#content .life {
-    background-color: #7BAAF7;
-}
-
-.finished {
-    background-color: forestgreen;
-}
-
-.critical {
-    background-color: red;
-}
-
-.normal {
-    background-color: gray;
-}
-
-.unimportant {
-    background-color: #7BAAF7;
-}
-
 #footer {
     text-align: center;
     margin-bottom: 2%;
-}
-
-.small-heading {
-    color: #FFFFCC;
 }
 
 /* ---------------------------------------------------------------
 Table Style
 ------------------------------------------------------------------ */
 
-table a:link {
-    font-weight: bold;
-    text-decoration: none;
-    background-color: #FFFFCC;
-}
-
-table a:visited {
-    font-weight: bold;
-    text-decoration: none;
-    background-color: #FFFFCC;
-}
-
-table a:active, table a:hover {
-    background-color: #FFFFCC;
-    text-decoration: underline;
-}
-
 table {
-    font-family: Arial, Helvetica, sans-serif;
     color: black;
     font-size: 12px;
-    text-shadow: 1px 1px 0px #fff;
+    text-shadow: 1px 1px 0 #fff;
     background-color: #FFFFCC;
-
     margin: 10px;
     border: #ccc 1px solid;
+    border-spacing: 0;
 }
 
 table th {
     padding: 21px 25px 22px 25px;
     border-top: 1px solid #fafafa;
     border-bottom: 1px solid #e0e0e0;
-
-    background-color: #FFFFCC;
-    background: -webkit-gradient(linear, left top, left bottom, from(#ebebeb), to(#ebebeb));
-    background: -moz-linear-gradient(top, #ededed, #ebebeb);
-}
-
-table tr:first-child th:last-child {
-    -moz-border-radius-topright: 3px;
-    -webkit-border-top-right-radius: 30px;
-    border-top-right-radius: 3px;
-    border-top-left-radius: 3px;
-    background-color: #FFFFCC;
+    background-color: #ebebeb;
 }
 
 table tr {
@@ -194,31 +149,11 @@ table tr {
     background-color: #FFFFCC;
 }
 
-table tr td:first-child {
-    text-align: left;
-    padding-left: 10px;
-    background-color: #FFFFCC;
-}
-
 table tr td {
-    padding: 5px;
+    padding: 10px;
     border-top: 1px solid #ffffff;
     border-bottom: 1px solid #e0e0e0;
     border-left: 1px solid #e0e0e0;
-    background-color: #FFFFCC;
-}
-
-table tr:last-child td:first-child {
-    -moz-border-radius-bottomleft: 3px;
-    -webkit-border-bottom-left-radius: 3px;
-    border-bottom-left-radius: 3px;
-    background-color: #FFFFCC;
-}
-
-table tr:last-child td:last-child {
-    -moz-border-radius-bottomright: 3px;
-    -webkit-border-bottom-right-radius: 3px;
-    border-bottom-right-radius: 3px;
     background-color: #FFFFCC;
 }
 
@@ -226,12 +161,8 @@ table tr:hover td {
     background-image: url("../resources/woodbutton.jpeg");
 }
 
-.alarmButton {
-}
-
 #finishedTasks {
     margin: 0;
-
 }
 
 #divFinishedTable {
@@ -240,26 +171,18 @@ table tr:hover td {
 
 #divFinishedTable tr {
     width: 200px;
-
 }
 
 .button {
     color: black;
     background-image: url("../resources/woodbutton.jpeg");
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7892c2', endColorstr='#476e9e', GradientType=0);
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
     border-radius: 20px;
     display: inline-block;
     cursor: pointer;
-    /*color:#ffffff;*/
-    font-family: Arial, sans-serif;
     font-size: 19px;
     padding: 12px 10px;
     text-decoration: none;
-    text-shadow: #A0522D;
     border: 4px outset #AD5C33;
-
     margin-right: 2%;
     margin-top: 5%;
     margin-left: 10%;
@@ -278,13 +201,11 @@ table tr:hover td {
 #divTasksTable {
     float: left;
     padding-left: 0;
-
 }
 
 #divFinishedTable {
     margin-top: -200px;
     padding: 0;
-
 }
 
 #addTaskForm {
@@ -299,43 +220,35 @@ table tr:hover td {
     background-color: #FFFFCC;
     position: relative;
     margin-top: 30px;
+    margin-left: 2%;
 }
 
 #addDate {
     background-color: #FFFFCC;
     position: relative;
+    margin-left: 2%;
 }
 
 #addAlarm {
     background-color: #FFFFCC;
     position: relative;
+    margin-left: 2%;
 }
 
 #addAlarmDate {
     background-color: #FFFFCC;
     position: relative;
-
+    margin-left: 2%;
 }
 
 #addTagName {
     background-color: #FFFFCC;
+    margin-left: 1%;
 }
 
 #buttonForm {
     width: 40%;
     margin-right: 0;
-}
-
-form {
-    padding-left: 0;
-    margin-right: 15%;
-    margin-left: 30%;
-
-}
-
-label {
-    padding: 5px;
-    margin-right: 10px;
 }
 
 #sortSelect {
@@ -352,31 +265,6 @@ label {
     bottom: 250px;
     right: 50px;
     list-style: none;
-}
-
-#addTaskName {
-    background-color: #FFFFCC;
-    margin-left: 2%;
-}
-
-#addDate {
-    background-color: #FFFFCC;
-    margin-left: 2%;
-}
-
-#addAlarm {
-    background-color: #FFFFCC;
-    margin-left: 1%;
-}
-
-#addAlarmDate {
-    background-color: #FFFFCC;
-    margin-left: 1%;
-}
-
-#addTagName {
-    background-color: #FFFFCC;
-    margin-left: 1%;
 }
 
 #sec, #min, #hour {
@@ -406,9 +294,35 @@ label {
     z-index: 0;
 }
 
-p {
-    text-align: center;
-    padding: 5px 0 0 0;
+/* Were going to be used to color the tasks based on tag and priority, but was not completed
+#content .none {
+    background-color: white;
 }
 
+#content .school {
+    background-color: crimson;
+}
 
+#content .work {
+    background-color: greenyellow;
+}
+
+#content .life {
+    background-color: #7BAAF7;
+}
+
+.finished {
+    background-color: forestgreen;
+}
+
+.critical {
+    background-color: red;
+}
+
+.normal {
+    background-color: gray;
+}
+
+.unimportant {
+    background-color: #7BAAF7;
+} */

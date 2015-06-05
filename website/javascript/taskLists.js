@@ -16,7 +16,7 @@ function TasksLists() {
     ];
 
     this.currentList = this.allTasks;
-    this.listState = "default";
+    this.listState = "None";
     this.editing = false;
 
     /**
@@ -46,6 +46,7 @@ function TasksLists() {
             this.allTasks.push(task);
             this.taskCount++;
         }
+
         this.editing = false;
         this.sortAll();
         this.switchList(this.listState);
@@ -96,6 +97,7 @@ function TasksLists() {
                 break;
             }
         }
+
         this.taskCount--;
         this.switchList(this.listState);
     };
@@ -131,6 +133,7 @@ function TasksLists() {
                 this.createList(this.allTags[tagIndex]);
             }
         }
+
         this.listState = state;
     };
 
@@ -141,11 +144,13 @@ function TasksLists() {
      */
     this.createList = function (tag) {
         var newList = [];
+
         for (var i = 0; i < this.taskCount; i++) {
             if (this.allTasks[i].tag.match(tag)) {
                 newList.push(this.allTasks[i]);
             }
         }
+
         this.currentList = [];
         this.currentList = newList;
     };
@@ -157,6 +162,7 @@ function TasksLists() {
         if (this.allTasks.length < 2) {
             return;
         }
+
         for (var i = this.allTasks.length - 1; i >= 0; i--) {
             for (var j = i - 1; j >= 0; j--) {
                 if (this.allTasks[i].dueDate < this.allTasks[j].dueDate) {
@@ -173,11 +179,18 @@ function TasksLists() {
      */
     this.refresh = function () {
         for (var i = 0; i < this.allTasks.length; i++) {
-            setPriority(this.allTasks[i]);
-            var now = Math.round(new Date().getTime() / 1000.0);
-            if (this.allTasks[i].alarmTime < now && this.allTasks[i].alarmTime) {
-                if (!this.allTasks[i].alarmDone) {
-                    alert("Alarm for: " + this.allTasks[i].taskName);
+            var task = this.allTasks[i];
+            setPriority(task);
+
+            // Checking for alarms
+            if (!task.alarmDone && task.alarmTime) {
+                // Getting the local time
+                var timeZoneOffset = Math.round(new Date().getTimezoneOffset() * 60);
+                var nowUtc = Math.round(new Date().getTime() / 1000.0);
+                var nowLocal = nowUtc - timeZoneOffset;
+
+                if (task.dueDate - task.alarmTime < nowLocal) {
+                    //alert("Alarm for: " + task.taskName);
                     this.allTasks[i].alarmDone = true;
                 }
             }

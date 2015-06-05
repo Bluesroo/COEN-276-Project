@@ -17,6 +17,7 @@ function Tag(tagName, tagColor) {
      */
     this.match = function (tag) {
         var matchString;
+
         if (tag.tagName) {
             matchString = tag.tagName;
         }
@@ -24,5 +25,5 @@ function Tag(tagName, tagColor) {
             matchString = tag;
         }
         return this.tagName.match(matchString) == matchString;
-    }
+    };
 }

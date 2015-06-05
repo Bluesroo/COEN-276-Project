@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
+    <title>Todo List</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="../style/style.css">
     <link rel="stylesheet" type="text/css" href="../style/jquery-ui.css">
-    <title>Todo List</title>
     <script src="../javascript/jQuery/jquery-2.1.3.js"></script>
     <script src="../javascript/jQuery/jquery-ui.js"></script>
     <script src="../javascript/tag.js"></script>
@@ -17,6 +17,7 @@
 
 <body>
 <div id="container">
+
     <div id="header">
         <h1 class="big-heading">The Best To Do List</h1>
     </div>
@@ -32,35 +33,42 @@
 
         <!-- To do list -->
         <div id="divTasksTable">
-            <table id="todoTasks" cellspacing='0'>
+            <table id="todoTasks">
             </table>
         </div>
 
         <!-- Add Form -->
         <form id="addTaskForm">
-            <label for="addTaskName">Task Name:</label><input type='text' id='addTaskName' name='taskName' size="35"><br><br>
-            <label for="addDate">Due Date:</label><input type='datetime-local' id='addDate' placeholder='Select Date' name='dueDate'><br><br>
-            <label for="addAlarm">Alarm:</label><input type='checkbox' id='addAlarm' name='yes' value='true'><br><br>
+            <label for="addTaskName">Task Name:</label><input type='text' id='addTaskName' name='taskName' size="35">
+            <br><br>
+            <label for="addDate">Due Date:</label><input type='datetime-local' id='addDate' name='dueDate'>
+            <br><br>
+            <label for="addAlarm">Alarm:</label><input type='checkbox' id='addAlarm' name='yes' value='true'>
+            <br><br>
             <label for="addAlarmDate">How far in advance?</label><input type='number' id='addAlarmDate' name='time' min='1' max='60' size="10">
             <select id='timeSelect'>
-                <option value='hours'>Hours</option>
-                <option value='minutes'>Minutes</option>
-            </select><br><br><br>
-            <label for="addTagName">Tag:</label><select id="addTagName"></select><br>
+                <option value='minutes'>Minute(s)</option>
+                <option value='hours'>Hour(s)</option>
+                <option value='days'>Day(s)</option>
+            </select>
+            <br><br>
+            <label for="addTagName">Tag:</label><select id="addTagName"></select>
+            <br><br><br>
         </form>
 
         <!-- Buttons -->
         <form id="buttonForm">
             <a id="addTask" class="button">Add Task</a>
             <a id="editTask" class="button">Edit Task</a>
-            <a id="removeTask" class="button">Remove Task</a><br><br>
+            <a id="removeTask" class="button">Remove Task</a>
+            <br><br>
             <a id="sortTasks" class="button">Sort Tasks</a>
             <label for="sortSelect">Tag to sort by:</label><select id="sortSelect"></select>
         </form>
 
         <!-- Finished list -->
         <div id="divFinishedTable">
-            <table id="finishedTasks" cellspacing='0'>
+            <table id="finishedTasks">
             </table>
         </div>
     </div>
@@ -69,7 +77,8 @@
 <br><br><br><br><br>
 
 <div id="footer">
-    <h5 class="small-heading"><a href="https://github.com/Bluesroo/COEN-276-Project">copy @ RKJProject</a></h5>
+    <h5 class="small-heading"><a href="https://github.com/Bluesroo/COEN-276-Project">COEN-276-Project @ Github</a></h5>
 </div>
+
 </body>
 </html>
