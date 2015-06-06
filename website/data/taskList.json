@@ -5,106 +5,82 @@
       "tagName": "School",
       "tagColor": "red"
     },
-    "id": 7,
-    "alarmTime": 1433499855,
+    "id": 0,
+    "alarmTime": 3600,
     "alarmDone": false,
-    "dueDate": 1433399755,
-    "priority": 3
+    "dueDate": 1433525400,
+    "priority": 0
   },
   {
-    "taskName": "Finish book",
-    "tag": {
-      "tagName": "Life",
-      "tagColor": "blue"
-    },
-    "id": 6,
-    "alarmTime": 1433404855,
-    "alarmDone": false,
-    "dueDate": 1433399845,
-    "priority": 2
-  },
-  {
-    "taskName": "Study for test",
-    "tag": {
-      "tagName": "School",
-      "tagColor": "red"
-    },
-    "id": 5,
-    "alarmTime": false,
-    "alarmDone": false,
-    "dueDate": 1433749855,
-    "priority": 2
-  },
-  {
-    "taskName": "Fight crime",
+    "taskName": "Complete tasks by deadline",
     "tag": {
       "tagName": "Work",
       "tagColor": "green"
     },
+    "id": 3,
+    "alarmTime": 86400,
+    "alarmDone": false,
+    "dueDate": 1433635140,
+    "priority": 0
+  },
+  {
+    "taskName": "Final 1",
+    "tag": {
+      "tagName": "School",
+      "tagColor": "red"
+    },
     "id": 4,
-    "alarmTime": false,
+    "alarmTime": 86400,
     "alarmDone": false,
-    "dueDate": 1433769855,
-    "priority": 1
+    "dueDate": 1433747400,
+    "priority": 0
   },
   {
-    "taskName": "Test add",
-    "tag": {
-      "tagName": "Fun",
-      "tagColor": "brown"
-    },
-    "id": 8,
-    "alarmTime": 43,
-    "alarmDone": false,
-    "dueDate": 1439337600,
-    "priority": 1
-  },
-  {
-    "taskName": "Watch movie",
-    "tag": {
-      "tagName": "Fun",
-      "tagColor": "brown"
-    },
-    "id": 2,
-    "alarmTime": false,
-    "alarmDone": false,
-    "dueDate": 1442029855,
-    "priority": 1
-  },
-  {
-    "taskName": "Clean room",
+    "taskName": "Don't forget to eat while studying",
     "tag": {
       "tagName": "Life",
       "tagColor": "blue"
     },
-    "id": 3,
-    "alarmTime": false,
+    "id": 2,
+    "alarmTime": 3600,
     "alarmDone": false,
-    "dueDate": 1442049855,
+    "dueDate": 1433754000,
     "priority": 0
   },
   {
-    "taskName": "Go for a run",
+    "taskName": "Go to Disneyland after finals",
     "tag": {
-      "tagName": "None",
-      "tagColor": "white"
+      "tagName": "Fun",
+      "tagColor": "brown"
     },
-    "id": 0,
-    "alarmTime": false,
+    "id": 5,
+    "alarmTime": 86400,
     "alarmDone": false,
-    "dueDate": 9000000000,
+    "dueDate": 1433930400,
     "priority": 0
   },
   {
-    "taskName": "Finish homework",
+    "taskName": "Go running",
     "tag": {
-      "tagName": "School",
-      "tagColor": "red"
+      "tagName": "Life",
+      "tagColor": "blue"
     },
     "id": 1,
     "alarmTime": false,
     "alarmDone": false,
     "dueDate": 9000000000,
+    "priority": 0
+  },
+  {
+    "taskName": "Workout",
+    "tag": {
+      "tagName": "None",
+      "tagColor": "white"
+    },
+    "id": 6,
+    "alarmTime": false,
+    "alarmDone": false,
+    "dueDate": null,
     "priority": 0
   }
 ]

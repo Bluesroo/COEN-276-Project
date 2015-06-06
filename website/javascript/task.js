@@ -12,16 +12,17 @@ function Task(taskName, tag, dueDate, alarm) {
     this.taskName = taskName;
     this.tag = tag;
     this.id = -1;
+
+    // alarmTime is local to the client
     this.alarmTime = alarm;
     this.alarmDone = false;
 
     this.dueDate = dueDate;
     if (this.dueDate == null) {
-        this.dueDate = 9000000000000;
+        this.dueDate = 9000000000;
     }
 
     this.priority = setPriority(this);
-
 }
 
 /**
@@ -46,18 +47,18 @@ function setPriority(task) {
         return PriorityEnum.UNIMPORTANT;
     }
 
-    var now = Date.now();
-    now = Math.round(now /= 1000);
+    var timeZoneOffset = Math.round(new Date().getTimezoneOffset() * 60);
+    var nowUtc = Math.round(new Date().getTime() / 1000.0);
+    var nowLocal = nowUtc - timeZoneOffset;
 
-    if (now - task.dueDate < -8640000) {
-        return PriorityEnum.UNIMPORTANT;
+    if (task.dueDate - nowLocal < 0) {
+        return PriorityEnum.LATE;
     }
-    else if (now - task.dueDate < -360000) {
-        return PriorityEnum.IMPORTANT;
-    }
-    else if (now - task.dueDate <= 10) {
+    else if (task.dueDate - nowLocal < 600) {
         return PriorityEnum.CRITICAL;
     }
-
-    return PriorityEnum.LATE;
+    else if (task.dueDate - nowLocal < 3600) {
+        return PriorityEnum.IMPORTANT;
+    }
+    return PriorityEnum.UNIMPORTANT;
 }
